@@ -1,4 +1,4 @@
-* /Validação dos campos obrigatórios. Este script verifica se não há nada em branco./ *
+//Validação dos campos obrigatórios. Este script verifica se não há nada em branco.
 //Campo "Primeiro nome" em branco;
 function firstNameBlank(firstName) {
     if (document.getElementById('firstName').value == "") {

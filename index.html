@@ -187,10 +187,10 @@
                         <div role="group" aria-label="Como você se
                                 identifica?">
                             <select id="identifiy" name="Identify" aria-label="Me identifico como:" required
-                             aria-required="true" role="spinbutton">
-                                <option id="mr" role="option" aria-label="Homem;" tabindex="0">Homem</option>
-                                <option id="ms" role="option" aria-label="Mulher" tabindex="0">Mulher</option>
-                                <option id="doNotSay" role="option" aria-label="Prefiro não dizer." tabindex="0">Prefiro
+                             aria-required="true" aria-dropeffect="popup" aria-haspopup="listbox">
+                                <option id="mr" aria-label="Homem;" tabindex="0">Homem</option>
+                                <option id="ms" aria-label="Mulher" tabindex="0">Mulher</option>
+                                <option id="doNotSay"  aria-label="Prefiro não dizer." tabindex="0">Prefiro
                                     não
                                     dizer.
                                 </option>
@@ -259,7 +259,7 @@
                     <div id="step9" class="steps" role="region" aria-label="Passo 9:">
                         <label for="zip">
                             <h4 tabindex="0">CEP: <sup>*</sup></h4>
-                            <input type="number" role="textbox" id="zip" name="zip" value="" placeholder="01234567"
+                            <input type="number" id="zip" name="zip" value="" placeholder="01234567"
                              maxlength="9" size="9" title="Digite seu
                                     CEP,
                                     sem o trasso." required aria-required="true" aria-label="Digite seu CEP"
@@ -289,7 +289,7 @@
                     apartamento:
                     <sup>*</sup>
                 </h4>
-                <input type="number" role="textbox" id="houseNumber" name="houseNumber" value="" placeholder="Digite o número da sua casa
+                <input type="number" id="houseNumber" name="houseNumber" value="" placeholder="Digite o número da sua casa
                                     ou
                                     apartamento:" title="Digite o número da sua casa /
                                     apartamento." maxlength="10" size="10" required aria-required="true" aria-label="Número
@@ -308,7 +308,7 @@
         <div id="step12" class="steps" role="region" aria-label="passo 12">
             <label for="complement">
                 <h4 tabindex="0">Complemento:</h4>
-                <input type="text" role="text" id="complement" name="Complement" value="" placeholder="Digite se é casa A ou B,
+                <input type="text" id="complement" name="Complement" value="" placeholder="Digite se é casa A ou B,
                                     apartamento A ou B, ou alguma ajuda para
                                     a
                                     identificação da sua moradia." maxlength="60" size="60" title="Informe se é casa principal ou do

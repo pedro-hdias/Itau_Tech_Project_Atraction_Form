@@ -12,23 +12,23 @@
 </head>
 
 <body onload="resetForm">
-	<div class="header" role="banner" aria-label="Título: ">
-		<h1 tabindex="0">
+	<div class="header" role="banner" aria-label="Topo da página: ">
+		<h1 tabindex="0" aria-roledescription="Título da página: ">
 			Projeto Itaú Tech &ndash;&nbsp;Formulário de atração:
 		</h1>
 	</div>
-	<div class="navBarAccessibility" role="navigation" aria-label="Barra de acessibilidade"
+	<div class="navBarAccessibility" role="navigation" aria-label="Barra de navegação e acessibilidade"
 		aria-roledescription="Use os links desta região para ir direto a seções específicas da página.">
 		<div id="showAccessibilityButtonSwitch" role="none"> <button type="button" role="button"
 				id="showAccessibilityMenu" title="Clique para exibir o menu de acessibilidade."
-				aria-label="Clique para exibir o menu de acessibilidade. alt+shift+a ou alt+a.)"
-				aria-roledescription="Botão para exibir o painel de acessibilidade: "
+				aria-label="Clique para exibir o menu de navegação e de acessibilidade. alt+shift+a ou alt+a.)"
+				aria-roledescription="Botão para exibir o painel de navegação e acessibilidade: "
 				onclick="showAccessibility('navAccess')" accesskey="a" aria-keyshortcuts="alt+a">
-				Clique para exibir o menu de acessibilidade. alt+shift+a ou alt+a.)
+				Clique para exibir o menu de navegação e de acessibilidade. alt+shift+a ou alt+a.)
 			</button>
 		</div>
 
-		<div id="navAccess" class="navAccess" role="menubar" aria-label="Menu de acessibilidade:">
+		<div id="navAccess" class="navAccess" role="menubar" aria-label="Menu de navegação e acessibilidade:">
 			<div role="none">
 				<a href="#content" role="link" title="Clique para saltar
                                 direto ao menu." accesskey="1" aria-keyshortcuts="alt+1"
@@ -46,10 +46,11 @@
 			</div>
 			<div role="none">
 				<button type="button" role="button" id="hideAccessibilityMenu"
-					title="Clique para esconder o menu de acessibilidade. (alt+shift+e ou alt+e.)"
-					aria-label="esconder menu de acessibilidade." onclick="hideAccessibility('navAccess')" accesskey="e"
-					aria-keyshortcuts="alt+e" aria-roledescription="Botão que oculta o painel de acessibilidade.">
-					esconder menu de acessibilidade.
+					title="Clique para esconder o menu de navegação e de acessibilidade. (alt+shift+e ou alt+e.)"
+					aria-label="esconder menu de navegação e de acessibilidade."
+					onclick="hideAccessibility('navAccess')" accesskey="alt+e" aria-keyshortcuts="alt+e"
+					aria-roledescription="Botão que oculta o painel de navegação e de acessibilidade.">
+					esconder menu de navegação e de acessibilidade.
 				</button>
 			</div>
 		</div>
@@ -82,8 +83,9 @@
                                     composto,não
                                     se
                                     esqueça. Alguns caracteres podem não ser
-                                    aceitos." required aria-required="true" aria-label="Primeiro nome:"
-							onblur="firstNameBlank(this)">
+                                    aceitos." required aria-required="true" aria-placeholder="Por exemplo:
+                                    Pedro
+                                    Henrique." onblur="firstNameBlank(this)">
 					</label>
 					<div id="firstNameErrorAlert" class="error" role="alert" aria-label="Atenção!"
 						aria-roledescription="Diálogo de erro: ">

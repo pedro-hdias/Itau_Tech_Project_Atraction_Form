@@ -7,13 +7,6 @@ function cpfBlank() {
         document.getElementById('cpfInvalid').style.display = 'none';
         document.getElementById('verifyResult').style.display = 'none';
     } else {
-        // exibe o botão para o usuário checar o resultado.
-        document.getElementById('cpfBlankAlertError').style.display = 'none';
-        document.getElementById('validCPF').style.display = 'none';
-        document.getElementById('cpfInvalid').style.display = 'none';
-        document.getElementById('verifyResult').style.display = 'block';
-
-        //caso haja algo escrito, valida cpf
         let cpf = (document.getElementById('cpf').value);
         // Validar se é String
         if (typeof cpf !== 'string') return false
@@ -40,8 +33,8 @@ function cpfBlank() {
             .map(el => +el)
 
         const rest = (count, pop) => (toValidate(pop)
-                // Calcular Soma dos digitos e multiplicar por 10
-                .reduce((soma, el, i) => soma + el * (count - i), 0) * 10)
+            // Calcular Soma dos digitos e multiplicar por 10
+            .reduce((soma, el, i) => soma + el * (count - i), 0) * 10)
             // Pegar o resto por 11
             %
             11
@@ -49,23 +42,21 @@ function cpfBlank() {
             %
             10
 
-        return !(rest(10, 2) !== validator[0] || rest(11, 1) !== validator[1])
-    }
-}
+        return !(rest(10, 2) !== validator[0] || rest(11, 1) !== validator[1]);
 
-function validate() {
-    if (cpfBlank(document.getElementById('cpf').value)) {
-        //Limpa alertas de erro, confirma a validade e exibe próximos passos
-        document.getElementById('cpfBlankAlertError').style.display = 'none';
-        document.getElementById('verifyResult').style.display = 'none';
-        document.getElementById('validCPF').style.display = 'block';
-        document.getElementById('cpfInvalid').style.display = none;
-    } else {
-        //Limpa alguns alertas de erros, confirma a invalidade e exibe mantém oculto os próximos passos
-        document.getElementById('cpfBlankAlertError').style.display = 'none';
-        document.getElementById('verifyResult').style.display = 'none';
-        document.getElementById('validCPF').style.display = 'none';
-        document.getElementById('cpfInvalid').style.display = 'block';
+        if (cpfBlank(document.getElementById('cpf').value)) {
+            //Limpa alertas de erro, confirma a validade e exibe próximos passos
+            document.getElementById('cpfBlankAlertError').style.display = 'none';
+            document.getElementById('verifyResult').style.display = 'none';
+            document.getElementById('validCPF').style.display = 'block';
+            document.getElementById('cpfInvalid').style.display = none;
+        } else {
+            //Limpa alguns alertas de erros, confirma a invalidade e exibe mantém oculto os próximos passos
+            document.getElementById('cpfBlankAlertError').style.display = 'none';
+            document.getElementById('verifyResult').style.display = 'none';
+            document.getElementById('validCPF').style.display = 'none';
+            document.getElementById('cpfInvalid').style.display = 'block';
+        }
     }
 }
 

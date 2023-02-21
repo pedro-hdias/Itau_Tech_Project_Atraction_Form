@@ -2,324 +2,328 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Pedro Henrique Dias Sousa">
-    <meta name="description"
-        content="Sempre desejou aprender à programar, desenvolver sites
-            inteirinhos? Itaú Tech é o programa ideal para você, formando inúmeros profissionais de qualidade, você também pode ser um deles!">
-    <title>
-        Itaú Tech – Project Atraction Form (Projeto Itaú Tech – Formulário de atração)
-    </title>
-    <link rel="stylesheet" href="./assets/styles/index.css" type="text/css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Pedro Henrique Dias Sousa">
+	<title>
+		Projeto Itaú Tech – Formulário de atração:
+	</title>
+	<link rel="stylesheet" href="./assets/styles/index.css" type="text/css">
 </head>
 
 <body onload="resetForm">
-    <div class="header" role="banner" aria-label="Título: ">
-        <h1 tabindex="0">
-            Itaú Tech &ndash;&nbsp;Project Atraction Form<br>
-            (Projeto Itaú Tech &ndash;&nbsp;Formulário de atração)
-        </h1>
+	<div class="header" role="banner" aria-label="Topo da página: ">
+		<h1 tabindex="0" aria-roledescription="Título da página: ">
+			Projeto Itaú Tech &ndash;&nbsp;Formulário de atração:
+		</h1>
+	</div>
+	<div class="navBarAccessibility" role="navigation" aria-label="Barra de navegação e acessibilidade"
+		aria-roledescription="Use os links desta região para ir direto a seções específicas da página.">
+		<div id="showAccessibilityButtonSwitch" role="none"> <button type="button" role="button"
+				id="showAccessibilityMenu" title="Clique para exibir o menu de acessibilidade."
+				aria-label="Clique para exibir o menu de navegação e de acessibilidade. alt+shift+a ou alt+a.)"
+				aria-roledescription="Botão para exibir o painel de navegação e acessibilidade: "
+				onclick="showAccessibility('navAccess')" accesskey="a" aria-keyshortcuts="alt+a">
+				Clique para exibir o menu de navegação e de acessibilidade. alt+shift+a ou alt+a.)
+			</button>
+		</div>
 
-        <div class="navBarAccessibility" role="navigation" aria-label="Barra de acessibilidade">
-            <div id="showAccessibilityButtonSwitch" role="none"> <button type="button" role="button"
-                    id="showAccessibilityMenu" title="Clique para exibir o menu de acessibilidade."
-                    aria-label="Clique para exibir o menu de acessibilidade. alt+shift+a ou alt+a.)"
-                    onclick="showAccessibility('navAccess')" accesskey="a" aria-keyshortcuts="alt+a">
-                    Clique para exibir o menu de acessibilidade. alt+shift+a ou alt+a.)
-                </button>
-            </div>
-
-            <div id="navAccess" class="navAccess" role="menubar" aria-label="Menu de acessibilidade:">
-                <div role="menuitem" aria-labelledby="link">
-                    <a href="#content" role="link" title="Clique para saltar
+		<div id="navAccess" class="navAccess" role="menubar" aria-label="Menu de navegação e acessibilidade:">
+			<div role="none">
+				<a href="#content" role="link" title="Clique para saltar
                                 direto ao menu." accesskey="1" aria-keyshortcuts="alt+1"
-                        aria-label="Clique para ir direto ao conteúdo. (alt+shift+1 ou alt + 1)">
-                        Clique para ir direto ao conteúdo. (alt+shift+1 ou alt + 1)
-                    </a>
-                </div>
-                <div role="menuitem" aria-labelledby="link">
-                    <a href="#form" role="link" title="Clique para saltar direto ao formulário." accesskey="2"
-                        aria-keyshortcuts="alt+2" aria-label="Clique para ir direto ao formulário.
-                                (alt+shift+2 ou alt+2.)">
-                        Clique para ir direto ao
-                        formulário. (alt+shift+2 ou alt+2.)
-                    </a>
-                </div>
-                <div role="none">
-                    <button type="button" role="button" id="hideAccessibilityMenu"
-                        title="Clique para esconder o menu de acessibilidade. (alt+shift+e ou alt+e.)"
-                        aria-label="esconder menu de acessibilidade." onclick="hideAccessibility('navAccess')"
-                        accesskey="e" aria-keyshortcuts="alt+e">
-                        esconder menu de acessibilidade.
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
+					aria-label="Clique para ir direto ao conteúdo. (alt+shift+1 ou alt + 1)" id="link1">
+					Clique para ir direto ao conteúdo. (alt+shift+1 ou alt + 1)
+				</a>
+			</div>
+			<div role="none">
+				<a href="#form" role="link" title="Clique para saltar direto ao formulário." accesskey="2"
+					aria-keyshortcuts="alt+2" aria-label="Clique para ir direto ao formulário.
+                                (alt+shift+2 ou alt+2.)" id="link2">
+					Clique para ir direto ao
+					formulário. (alt+shift+2 ou alt+2.)
+				</a>
+			</div>
+			<div role="none">
+				<button type="button" role="button" id="hideAccessibilityMenu"
+					title="Clique para esconder o menu de navegação e de acessibilidade. (alt+shift+e ou alt+e.)"
+					aria-label="esconder menu de navegação e de acessibilidade."
+					onclick="hideAccessibility('navAccess')" accesskey="alt+e" aria-keyshortcuts="alt+e"
+					aria-roledescription="Botão que oculta o painel de navegação e de acessibilidade.">
+					esconder menu de navegação e de acessibilidade.
+				</button>
+			</div>
+		</div>
+	</div>
 
-    <div id="content" class="contentMain" role="main" aria-label="Criação de
-                cadastro pessoal.">
-        <h2 tabindex="0">Criação de cadastro pessoal.</h2>
-        <form id="form" class="form" name="subscription" method="POST" data-netlify="true" role="form"
-            aria-label="Formulário de inscrição:">
-            <p tabindex="0">Preencha o formulário a baixo, em breve
-                entraremos em contato!</p>
-            <br>
-            <fieldset id="personalData" role="group" aria-label="Dados
-                        pessoais:">
-                <legend>
-                    <h3 tabindex="0">Dados pessoais:</h3>
-                </legend>
-                <div class="steps" role="region" aria-label=" passo 1:">
-                    <label for="firstName">
-                        <h4 tabindex="0">Primeiro nome: <sup>*</sup></h4>
-                        <input type="text" role="textbox" id="firstName" name="firstName" value="" maxlength="60"
-                            size="60" placeholder="Por exemplo:
+	<div id="content" class="contentMain" role="main" aria-label="Criação de
+                cadastro: " aria-roledescription="Etapa de cadastro.">
+		<h2 tabindex="0">Criação de cadastro: </h2>
+		<form id="form" class="form" name="subscription" method="POST" data-netlify="true" role="form"
+			aria-label="Formulário de inscrição:" aria-roledescription="Formulário de cadastro: ">
+			<p tabindex="0">Preencha o formulário a baixo, em breve
+				entraremos em contato!</p>
+			<br>
+			<fieldset id="personalData" role="group" aria-label="Dados
+                        pessoais:"
+				aria-roledescription="Nesta etapa, precisamos que você seja o mais preciso possível pois é por meio dela que validaremos sua inscrição.">
+				<legend>
+					<h3 tabindex="0">Dados pessoais:</h3>
+					<p tabindex="0">Nesta etapa, precisamos que você seja o mais preciso possível pois é por meio dela
+						que validaremos sua inscrição.</p>
+				</legend>
+				<div class="steps" role="region" aria-label=" passo 1:">
+					<label for="firstName">
+						<h4 tabindex="0">Passo 1: primeiro nome: <sup>*</sup></h4>
+						<input type="text" role="textbox" id="firstName" name="firstName" value="" maxlength="60"
+							size="60" placeholder="Por exemplo:
                                     Pedro
                                     Henrique." pattern="[A-z
                                     ÁáÀàÃãÂâªÉéÈèÊêÍíÌìÎîÓóÒòÕõÔôºÚúÙùÛûÇç]+" title="Digite seu nome, se for
                                     composto,não
                                     se
                                     esqueça. Alguns caracteres podem não ser
-                                    aceitos." required aria-required="true" aria-label="Primeiro nome:"
-                            onblur="firstNameBlank(this)">
-                    </label>
-                    <div id="firstNameErrorAlert" class="error" role="alert" aria-label="Atenção!">
-                        <p tabindex="0">Este campo não pode ser
-                            deixado
-                            em
-                            branco.</p>
-                    </div>
-                </div>
+                                    aceitos." required aria-required="true" aria-placeholder="Por exemplo:
+                                    Pedro
+                                    Henrique." onblur="firstNameBlank(this)">
+					</label>
+					<div id="firstNameErrorAlert" class="error" role="alert" aria-label="Atenção!"
+						aria-roledescription="Diálogo de erro: ">
+						<p tabindex="0">Este campo não pode ser
+							deixado
+							em
+							branco.</p>
+					</div>
+				</div>
 
-                <div class="steps" role="region" aria-label="Passo
+				<div class="steps" role="region" aria-label="Passo
                             2:">
-                    <label for="lastName">
-                        <h4 tabindex="0">Sobrenome:<sup>*</sup></h4>
-                        <input type="text" role="textbox" id="lastName" name="Last Name" value="" maxlength="60"
-                            size="60" pattern="[A-z
+					<label for="lastName">
+						<h4 tabindex="0">Passo 2: Sobrenome:<sup>*</sup></h4>
+						<input type="text" role="textbox" id="lastName" name="Last Name" value="" maxlength="60"
+							size="60" pattern="[A-z
                                     ÁáÀàÃãÂâªÉéÈèÊêÍíÌìÎîÓóÒòÕõÔôºÚúÙùÛûÇç]+" placeholder="Por exemplo: Dias Sousa"
-                            title="Digite seu sobrenome, alguns
+							title="Digite seu sobrenome, alguns
                                     caracteres
                                     talvez não sejam aceitos." required aria-required="true" aria-label="Sobrenome:"
-                            onblur="lastNameBlank(this)">
-                    </label>
-                    <div id="lastNameAlertError" class="error" role="alert" aria-label="Atenção!">
-                        <p tabindex="0">Este campo não pode ser
-                            deixado
-                            em
-                            branco.</p>
-                    </div>
-                </div>
+							onblur="lastNameBlank(this)">
+					</label>
+					<div id="lastNameAlertError" class="error" role="alert" aria-label="Atenção!"
+						aria-roledescription="Diálogo de erro: ">
+						<p tabindex="0">Este campo não pode ser
+							deixado
+							em
+							branco.</p>
+					</div>
+				</div>
 
-                <div class="steps" role="region" aria-label="Passo
+				<div class="steps" role="region" aria-label="Passo
                             3:">
-                    <label for="birtDate">
-                        <h4 tabindex="0">Data de nascimento: <sup>*</sup></h4>
-                        <input type="date" id="birtDate" name="birtDay" value="" title="Digite o dia que você nasceu."
-                            required aria-required="true" aria-label="Data de nascimento:" onblur="birtDateBlank(this)">
-                    </label>
-                    <div id="birtDateBlankAlertError" class="error" role="alert" aria-label="Atenção!">
-                        <p tabindex="0">Este campo não pode ser
-                            deixado
-                            em
-                            branco.</p>
-                    </div>
-                </div>
+					<label for="birtDate">
+						<h4 tabindex="0">Passo 3: Data de nascimento: <sup>*</sup></h4>
+						<input type="date" id="birtDate" name="birtDay" value="" title="Digite o dia que você nasceu."
+							required aria-required="true" aria-label="Data de nascimento:" onblur="birtDateBlank(this)">
+					</label>
+					<div id="birtDateBlankAlertError" class="error" role="alert" aria-label="Atenção!"
+						aria-roledescription="Diálogo de erro: ">
+						<p tabindex="0">Este campo não pode ser
+							deixado
+							em
+							branco.</p>
+					</div>
+				</div>
 
-                <div class="steps" role="region" aria-label="Passo
+				<div class="steps" role="region" aria-label="Passo
                             4:">
-                    <label for="cpf">
-                        <h4 tabindex="0">CPF: <sup>*</sup></h4>
-                        <input type="tel" role="textbox" id="cpf" name="cpf" value="" maxlength="14" size="14"
-                            placeholder="01234567899" title="Digite o seu CPF no formato:
+					<label for="cpf">
+						<h4 tabindex="0">Passo 4: CPF: <sup>*</sup></h4>
+						<input type="tel" role="textbox" id="cpf" name="cpf" value="" maxlength="14" size="14"
+							placeholder="01234567899" title="Digite o seu CPF no formato:
                                     xxxxxxxxxxx,
                                     sem os pontos ou traços." required aria-required="true" onblur="cpfBlank(this)"
-                            onkeydown="javascript: fMasc( this, mCPF
+							onkeydown="javascript: fMasc( this, mCPF
                                     );">
-                    </label>
-                    <div id="verifyResult" class="hidde" role="alert" aria-label="Validação:">
-                        <button type="button" role="button" onclick="validate()" aria-label="Clique para verificar a
+					</label>
+					<div id="verifyResult" class="hidde" role="alert" aria-label="Validação:">
+						<button type="button" role="button" onclick="validate()" aria-label="Clique para verificar a
                                     validade." title="Clique para verificar a
                                     validade.">Clique
-                            para verificar a validade.</button>
-                    </div>
-                    <div id="cpfBlankAlertError" class="error" role="alert" aria-label="Atenção!">
-                        <p tabindex="0">Este campo não pode ser
-                            deixado
-                            em
-                            branco.</p>
-                    </div>
-                    <div id="cpfInvalid" class="error" role="alert" aria-label="Atenção!">
-                        <p tabindex="0">O número de CPF informado
-                            não é
-                            válido. Verifique e tente novamente!</p>
-                    </div>
-                    <div id="validCPF" class="success" role="alert" aria-label="Sucesso!">
-                        <p tabindex="0">Este CPF é válido, pode
-                            continuar.</p>
-                    </div>
-                </div>
+							para verificar a validade.</button>
+					</div>
+					<div id="cpfBlankAlertError" class="error" role="alert" aria-label="Atenção!">
+						<p tabindex="0">Este campo não pode ser
+							deixado
+							em
+							branco.</p>
+					</div>
+					<div id="cpfInvalid" class="error" role="alert" aria-label="Atenção!">
+						<p tabindex="0">O número de CPF informado
+							não é
+							válido. Verifique e tente novamente!</p>
+					</div>
+					<div id="validCPF" class="success" role="alert" aria-label="Sucesso!">
+						<p tabindex="0">Este CPF é válido, pode
+							continuar.</p>
+					</div>
+				</div>
 
-                <div class="steps" role="region" aria-label="Passo
+				<div class="steps" role="region" aria-label="Passo
                             5">
-                    <label for="rg">
-                        <h4 tabindex="0">Digite seu RG:<sup>*</sup></h4>
-                        <input type="text" role="textbox" id="rg" name="rg" value="" maxlength="22" size="22" title="Digite apenas os números do seu
+					<label for="rg">
+						<h4 tabindex="0">Digite seu RG:<sup>*</sup></h4>
+						<input type="text" role="textbox" id="rg" name="rg" value="" maxlength="22" size="22" title="Digite apenas os números do seu
                                     RG" placeholder="Exemplo: 0123456" required aria-required="true"
-                            onblur="rgBlankAlert(this)">
-                    </label>
-                    <div id="rgBlankAlertError" class="error" role="alert" aria-label="Atenção!">
-                        <p tabindex="0">Este campo não pode ser
-                            deixado
-                            em
-                            branco.</p>
-                    </div>
-                </div>
+							onblur="rgBlankAlert(this)">
+					</label>
+					<div id="rgBlankAlertError" class="error" role="alert" aria-label="Atenção!">
+						<p tabindex="0">Este campo não pode ser
+							deixado
+							em
+							branco.</p>
+					</div>
+				</div>
 
-                <div lass="steps" role="region" aria-label="Passo
+				<div lass="steps" role="region" aria-label="Passo
                             6:">
-                    <h4 tabindex="0">Como você se identifica? <sup>*</sup></h4>
-                    <div role="group" aria-label="Como você se
+					<h4 tabindex="0">Como você se identifica? <sup>*</sup></h4>
+					<div role="group" aria-label="Como você se
                                 identifica?">
-                        <select id="identifiy" name="Identify" aria-label="Me identifico como:" required
-                            aria-required="true" aria-dropeffect="popup" aria-haspopup="listbox">
-                            <option id="mr" aria-label="Homem;" tabindex="0">Homem</option>
-                            <option id="ms" aria-label="Mulher" tabindex="0">Mulher</option>
-                            <option id="doNotSay" aria-label="Prefiro não dizer." tabindex="0">Prefiro
-                                não
-                                dizer.
-                            </option>
-                        </select>
-                    </div>
-                </div>
-            </fieldset>
+						<select id="identifiy" name="Identify" aria-label="Me identifico como:" required
+							aria-required="true" aria-dropeffect="popup" aria-haspopup="listbox">
+							<option id="mr" aria-label="Homem;" tabindex="0">Homem</option>
+							<option id="ms" aria-label="Mulher" tabindex="0">Mulher</option>
+							<option id="doNotSay" aria-label="Prefiro não dizer." tabindex="0">Prefiro
+								não
+								dizer.
+							</option>
+						</select>
+					</div>
+				</div>
+			</fieldset>
 
-            <fieldset id="contactData" aria-label="Métodos de
+			<fieldset id="contactData" aria-label="Métodos de
                         contato:">
-                <legend>
-                    <h3 tabindex="0">Métodos de contato:</h3>
-                </legend>
+				<legend>
+					<h3 tabindex="0">Métodos de contato:</h3>
+				</legend>
 
-                <div id="step7" class="steps" role="region" aria-label="Passo 7">
-                    <label for="email">
-                        <h4 tabindex="0">E-mail: <sup>*</sup></h4>
-                        <input type="email" role="textbox" id="email" name="e-mail" value=""
-                            placeholder="meu.email@porexemplo.com" title="Digite seu e-mail, alguns
+				<div id="step7" class="steps" role="region" aria-label="Passo 7">
+					<label for="email">
+						<h4 tabindex="0">E-mail: <sup>*</sup></h4>
+						<input type="email" role="textbox" id="email" name="e-mail" value=""
+							placeholder="meu.email@porexemplo.com" title="Digite seu e-mail, alguns
                                     caracteres
                                     não
                                     são aceitos." required aria-required="true" onblur="emailBlankAlert(this)">
-                    </label>
-                    <div id="emailBlankAlertError" class="error" role="alert" aria-label="Atenção!">
-                        <p tabindex="0">Este campo não pode ser
-                            deixado
-                            em
-                            branco.</p>
-                    </div>
-                </div>
+					</label>
+					<div id="emailBlankAlertError" class="error" role="alert" aria-label="Atenção!">
+						<p tabindex="0">Este campo não pode ser
+							deixado
+							em
+							branco.</p>
+					</div>
+				</div>
 
-                <div id="step8" class="steps" role="region" aria-label="Passo 8:">
-                    <label for="phone">
-                        <h4 tabindex="0">Telefone / Celular: <sup>*</sup></h4>
-                        <input type="tel" role="textbox" id="phone" name="Phone" value="" placeholder="(01)23456-7890"
-                            title="Digite
+				<div id="step8" class="steps" role="region" aria-label="Passo 8:">
+					<label for="phone">
+						<h4 tabindex="0">Telefone / Celular: <sup>*</sup></h4>
+						<input type="tel" role="textbox" id="phone" name="Phone" value="" placeholder="(01)23456-7890"
+							title="Digite
                                     seu
                                     número de celular." required aria-required="true" onblur="phoneBlankAlert(this)">
-                    </label>
-                    <div id="phoneBlankAlertError" class="error" role="alert" aria-label="Atenção!">
-                        <p tabindex="0">Este campo não pode ser
-                            deixado
-                            em
-                            branco.</p>
-                    </div>
-                    <label for="whatsapp">
-                        <p tabindex="0">Este celular possui
-                            WhatsAppp?</p>
-                        <input type="checkbox" role="checkbox" id="whatsapp" name="whatsapp" value="Este telefone /
+					</label>
+					<div id="phoneBlankAlertError" class="error" role="alert" aria-label="Atenção!">
+						<p tabindex="0">Este campo não pode ser
+							deixado
+							em
+							branco.</p>
+					</div>
+					<label for="whatsapp">
+						<p tabindex="0">Este celular possui
+							WhatsAppp?</p>
+						<input type="checkbox" role="checkbox" id="whatsapp" name="whatsapp" value="Este telefone /
                                     celular
                                     possui WhatsApp." title="Marque se permite que lhe
                                     enviemos
                                     ocasionalmente mensagens via WhatsApp." aria-label="Este celular possui
                                     Whatsapp.">
-                    </label>
-                </div>
-            </fieldset>
+					</label>
+				</div>
+			</fieldset>
 
-            <fieldset id="housingData" role="group" aria-label="Dados de
+			<fieldset id="housingData" role="group" aria-label="Dados de
                         sua
                         moradia:">
-                <legend>
-                    <h3 tabindex="0">Dados da sua moradia:</h3>
-                </legend>
+				<legend>
+					<h3 tabindex="0">Dados da sua moradia:</h3>
+				</legend>
 
-                <div id="step9" class="steps" role="region" aria-label="Passo 9:">
-                    <label for="zip">
-                        <h4 tabindex="0">CEP: <sup>*</sup></h4>
-                        <input type="number" id="zip" name="zip" value="" placeholder="01234567" maxlength="9" size="9"
-                            title="Digite seu
+				<div id="step9" class="steps" role="region" aria-label="Passo 9:">
+					<label for="zip">
+						<h4 tabindex="0">CEP: <sup>*</sup></h4>
+						<input type="number" id="zip" name="zip" value="" placeholder="01234567" maxlength="9" size="9"
+							title="Digite seu
                                     CEP,
                                     sem o trasso." required aria-required="true" aria-label="Digite seu CEP"
-                            onblur="pesquisacep(this.value);">
-                    </label>
-                </div>
+							onblur="pesquisacep(this.value);">
+					</label>
+				</div>
 
-                <div id="step10" class="steps" role="region" aria-label="Passo 10:">
-                    <label for="street">
-                        <h4 tabindex="0">Rua: <sup>*</sup></h4>
-                        <input type="text" role="textbox" id="street" name="street" value=""
-                            placeholder="Digite o nome da sua Rua:" maxlength="60" size="60" title="Digite o nome da rua em que você
+				<div id="step10" class="steps" role="region" aria-label="Passo 10:">
+					<label for="street">
+						<h4 tabindex="0">Rua: <sup>*</sup></h4>
+						<input type="text" role="textbox" id="street" name="street" value=""
+							placeholder="Digite o nome da sua Rua:" maxlength="60" size="60" title="Digite o nome da rua em que você
                                     mora." required aria-required="true" aria-label="Rua:"
-                            onblur="streetBlankAlert(this)"">
+							onblur="streetBlankAlert(this)"">
                             </label>
                             <div id=" streetBlankAlertError" class="error" role="alert" aria-label="Atenção!">
-                        <p tabindex="0">Este campo não pode ser
-                            deixado
-                            em
-                            branco.</p>
-                </div>
-    </div>
+						<p tabindex="0">Este campo não pode ser
+							deixado
+							em
+							branco.</p>
+				</div>
+	</div>
 
-    <div id="step11" class="steps" role="region" aria-label="Passo 11:">
-        <label for="houseNumber">
-            <h4 tabindex="0">Número da sua casa /
-                apartamento:
-                <sup>*</sup>
-            </h4>
-            <input type="number" id="houseNumber" name="houseNumber" value="" placeholder="Digite o número da sua casa
+	<div id="step11" class="steps" role="region" aria-label="Passo 11:">
+		<label for="houseNumber">
+			<h4 tabindex="0">Número da sua casa /
+				apartamento:
+				<sup>*</sup>
+			</h4>
+			<input type="number" id="houseNumber" name="houseNumber" value="" placeholder="Digite o número da sua casa
                                     ou
                                     apartamento:" title="Digite o número da sua casa /
                                     apartamento." maxlength="10" size="10" required aria-required="true" aria-label="Número
                                     da
                                     sua
                                     casa / apartamento:" onblur="houseNumberBlankAlert(this)">
-        </label>
-        <div id="houseNumberBlankAlertError" class="error" role="alert" aria-label="Atenção!">
-            <p tabindex="0">Este campo não pode ser
-                deixado
-                em
-                branco.</p>
-        </div>
-    </div>
+		</label>
+		<div id="houseNumberBlankAlertError" class="error" role="alert" aria-label="Atenção!">
+			<p tabindex="0">Este campo não pode ser
+				deixado
+				em
+				branco.</p>
+		</div>
+	</div>
 
-    <div id="step12" class="steps" role="region" aria-label="passo 12">
-        <label for="complement">
-            <h4 tabindex="0">Complemento:</h4>
-            <input type="text" id="complement" name="Complement" value="" placeholder="Digite se é casa A ou B,
+	<div id="step12" class="steps" role="region" aria-label="passo 12">
+		<label for="complement">
+			<h4 tabindex="0">Complemento:</h4>
+			<input type="text" id="complement" name="Complement" value="" placeholder="Digite se é casa A ou B,
                                     apartamento A ou B, ou alguma ajuda para
                                     a
                                     identificação da sua moradia." maxlength="60" size="60" title="Informe se é casa principal ou do
                                     fundo,
                                     qualquer coisa que facilite a
                                     identificação.">
-        </label>
-    </div>
+		</label>
+	</div>
 
-    <div id="step13" class="steps" role="region" aria-label="Passo 13">
-        <label for="neighBorHood">
-            <h4 tabindex="0">Bairro: <sup>*</sup></h4>
-            <input type="text" role="textbox" id="neighBorHood" name="neighBorHood" value="" placeholder="Digite o bairro que você
+	<div id="step13" class="steps" role="region" aria-label="Passo 13">
+		<label for="neighBorHood">
+			<h4 tabindex="0">Bairro: <sup>*</sup></h4>
+			<input type="text" role="textbox" id="neighBorHood" name="neighBorHood" value="" placeholder="Digite o bairro que você
                                     mora." maxlength="60" size="60" title="Digite o nome do bairro onde você
                                     vive,
                                     se for em um prédio/condomînio, digite o
@@ -329,91 +333,91 @@
                                     nome
                                     do prédio/condomínio." required aria-required="true" aria-label="Bairro
                                     ou condomínio:" onblur="neighBorHoodBlankAlert(this)">
-        </label>
-        <div id="neighBorHoodBlankAlertError" class="error" role="alert" aria-label="Atenção!">
-            <p tabindex="0">Este campo não pode ser
-                deixado
-                em
-                branco.</p>
-        </div>
-    </div>
+		</label>
+		<div id="neighBorHoodBlankAlertError" class="error" role="alert" aria-label="Atenção!">
+			<p tabindex="0">Este campo não pode ser
+				deixado
+				em
+				branco.</p>
+		</div>
+	</div>
 
-    <div id="step14" class="steps" role="region" aria-label="Passo 14">
-        <label for="city">
-            <h4 tabindex="0">Cidade: <sup>*</sup></h4>
-            <input type="text" role="textbox" id="city" name="City" value="" placeholder="Nome da sua cidade de
+	<div id="step14" class="steps" role="region" aria-label="Passo 14">
+		<label for="city">
+			<h4 tabindex="0">Cidade: <sup>*</sup></h4>
+			<input type="text" role="textbox" id="city" name="City" value="" placeholder="Nome da sua cidade de
                                     residência:" maxlength="60" size="60" title="Digite o nome da cidade que vvocê
                                     está
                                     morando atualmente." required aria-required="true" aria-label="Cidade:"
-                onblur="cityBlankAlert(this)">
-        </label>
-        <div id="cityBlankAlertError" class="error" role="alert" aria-label="Atenção!">
-            <p tabindex="0">Este campo não pode ser
-                deixado
-                em
-                branco.</p>
-        </div>
-    </div>
+				onblur="cityBlankAlert(this)">
+		</label>
+		<div id="cityBlankAlertError" class="error" role="alert" aria-label="Atenção!">
+			<p tabindex="0">Este campo não pode ser
+				deixado
+				em
+				branco.</p>
+		</div>
+	</div>
 
-    <div id="step15" class="steps" role="region" aria-label="Passo15">
-        <label for="estate">
-            <h4 tabindex="0">Estado: <sup>*</sup></h4>
-            <input type="text" role="textbox" id="estate" name="estate" value="" placeholder="Estado de residência:"
-                maxlength="60" size="60" title="Digite o estado onde você mora.
+	<div id="step15" class="steps" role="region" aria-label="Passo15">
+		<label for="estate">
+			<h4 tabindex="0">Estado: <sup>*</sup></h4>
+			<input type="text" role="textbox" id="estate" name="estate" value="" placeholder="Estado de residência:"
+				maxlength="60" size="60" title="Digite o estado onde você mora.
                                     Se
                                     seu
                                     país chama de província, digite-a." required aria-required="true"
-                aria-label="Estado:" onblur="stateBlankAlert(this)">
-        </label>
-        <div id="stateBlankAlertError" class="error" role="alert" aria-label="Atenção!">
-            <p tabindex="0">Este campo não pode ser
-                deixado
-                em
-                branco.</p>
-        </div>
-    </div>
+				aria-label="Estado:" onblur="stateBlankAlert(this)">
+		</label>
+		<div id="stateBlankAlertError" class="error" role="alert" aria-label="Atenção!">
+			<p tabindex="0">Este campo não pode ser
+				deixado
+				em
+				branco.</p>
+		</div>
+	</div>
 
-    <div id="step16" class="steps" role="region" aria-label="passo 16">
-        <label for="country">
-            <h4 tabindex="0">País: <sup>*</sup></h4>
-            <input type="text" role="textbox" id="country" name="country" value="" placeholder="Seu país de residência:"
-                maxlength="40" size="40" title="Digite o
+	<div id="step16" class="steps" role="region" aria-label="passo 16">
+		<label for="country">
+			<h4 tabindex="0">País: <sup>*</sup></h4>
+			<input type="text" role="textbox" id="country" name="country" value="" placeholder="Seu país de residência:"
+				maxlength="40" size="40" title="Digite o
                                     país
                                     onde você mora." required aria-required="true" aria-label="País:"
-                onblur="countryBlankAlert(this)">
-        </label>
-        <div id="countryBlankAlertError" class="error" role="alert" aria-label="Atenção!">
-            <p tabindex="0">Este campo não pode ser
-                deixado
-                em
-                branco.</p>
-        </div>
-    </div>
-    </fieldset>
+				onblur="countryBlankAlert(this)">
+		</label>
+		<div id="countryBlankAlertError" class="error" role="alert" aria-label="Atenção!">
+			<p tabindex="0">Este campo não pode ser
+				deixado
+				em
+				branco.</p>
+		</div>
+	</div>
+	</fieldset>
 
-    <fieldset title="Manipular formulário.">
-        <legend>
-            <h3 tabindex="0">Manipular formulário.</h3>
-        </legend>
-        <div class="privacy">
-            <h4 tabindex="0">Política de brivacidade:</h4>
-            <p tabindex="0">Marcando a caixa de seleção a
-                baixo
-                e
-                enviando este formulário, você concorda com
-                nossa política de privacidade e tanto nós
-                quanto
-                você estaremos sujeitos á este contrato
-                durante
-                a manipulação de seus dados.</p>
-            <label for="privacy">
-                <h4 tabindex="0">Concordo com a política de
-                    privacidade, li e entendo que estamos
-                    sujeitos
-                    aos
-                    termos
-                    deste contrato. <sup>*</sup></h4>
-                <input type="checkbox" role="checkbox" id="privacy" name="Privacy" value="Concordo com a política de
+	<fieldset title="Manipular formulário.">
+		<legend>
+			<h3 tabindex="0">Manipular formulário.</h3>
+		</legend>
+		<div class="privacy">
+			<h4 tabindex="0">Política de brivacidade:</h4>
+			<p tabindex="0">Marcando a caixa de seleção a
+				baixo
+				e
+				enviando este formulário, você concorda com
+				nossa política de privacidade e tanto nós
+				quanto
+				você estaremos sujeitos á este contrato
+				durante
+				a manipulação de seus dados.</p>
+			<label for="privacy">
+				<h4 tabindex="0">Concordo com a política de
+					privacidade, li e entendo que estamos
+					sujeitos
+					aos
+					termos
+					deste contrato. <sup>*</sup></h4>
+				<input type="checkbox" role="checkbox" id="privacy" name="Privacy" value="Concordo com a política de
                                     privacidade,
                                     li e entendo que estamos sujeitos aos
                                     termos
@@ -427,69 +431,70 @@
                                     privacidade, li e entendo que estamos
                                     sujeitos
                                     aos termos deste contrato." required aria-required="true">
-            </label>
-        </div>
+			</label>
+		</div>
 
-        <h3 tabindex="0">Enviar ou limpar formulário.</h3>
-        <div class="resetSubmitForm">
-            <div>
-                <label for="cancel">
-                    <h4>Limpar formulário.</h4>
-                    <input type="reset" role="button" id="cancel" name="cancel" value="Limpar
+		<h3 tabindex="0">Enviar ou limpar formulário.</h3>
+		<div class="resetSubmitForm">
+			<div>
+				<label for="cancel">
+					<h4>Limpar formulário.</h4>
+					<input type="reset" role="button" id="cancel" name="cancel" value="Limpar
                                         formulário." aria-label="Limpar formulário." title="Clique aqui para deletar tudo
                                         o
                                         que
                                         você inseriu." onclick="resetSubmit()">
-                </label>
-            </div>
-            <div>
-                <label for="submitBtn">
-                    <h4>Enviar dados.</h4>
-                    <input type="submit" role="button" id="submitBtn" name="submit" value="Enviar
+				</label>
+			</div>
+			<div>
+				<label for="submitBtn">
+					<h4>Enviar dados.</h4>
+					<input type="submit" role="button" id="submitBtn" name="submit" value="Enviar
                                         dados." aria-label="Enviar formulário." title="Clique aqui para enviar o
                                         formulário." disabled onclick="checkRequiredInputs()">
-                </label>
-            </div>
-        </div>
-    </fieldset>
-    </form>
-    </div>
-    <div class="footer" role="contentinfo" aria-label="Rodapé: ">
-        <p tabindex="0">Conteúdo desenvolvido com o apoio de
-            <strong>Gama
-                Academy</strong> e <strong>Programa Itaú
-                Techh
-                &ndash;&nbsp; edição PCD.</strong>
-        </p>
-        <small>
-            <p tabindex="0">Copyright (&copy;)
-                &ndash;&nbsp;Todos os
-                direitos reservados à <a href="https://github.com/pedro-hdias/">Pedro
-                    Dias</a></p>
-        </small>
-        <div class="addInfo">
-            <a href="https://github.com/pedro-hdias/Itau_Tech_Project_Atraction_Form"
-                title="Clique para visitar este projeto no GitHub (Abre em nova guia." target="_blank">
-                Este projeto no github;
-            </a>
-            |&nbsp;
-            <a href="https://www.linkedin.com/in/pedro-henrique-dias-sousa-a38874149/"
-                title="Ver meu perfil no linkedin; (Abre em nova guia.)" target="_blank">
-                Meu perfil no linkedin;
-            </a>
-            |&nbsp;
-            <a href="mailto: pedrohenriquediassousa@outlook.com"
-                title="Me envie uma mensagem via e-mail. (abre em nova guia ou no seu cliente de e-mail.)"
-                target="_blank">
-                Me envie um e-mail.
-            </a>
-        </div>
-    </div>
+				</label>
+			</div>
+		</div>
+	</fieldset>
+	</form>
+	</div>
+	<div class="footer" role="contentinfo" aria-label="Rodapé: ">
+		<p tabindex="0">Conteúdo desenvolvido com o apoio de
+			<strong>Gama
+				Academy</strong> e <strong>Programa Itaú
+				Techh
+				&ndash;&nbsp; edição PCD.</strong>
+		</p>
+		<small>
+			<p tabindex="0">Copyright (&copy;)
+				&ndash;&nbsp;Todos os
+				direitos reservados à <a href="https://github.com/pedro-hdias/">Pedro
+					Dias</a></p>
+		</small>
+		<div class="addInfo">
+			<a href="https://github.com/pedro-hdias/Itau_Tech_Project_Atraction_Form"
+				title="Clique para visitar este projeto no GitHub (Abre em nova guia." target="_blank">
+				Este projeto no github;
+			</a>
+			|&nbsp;
+			<a href="https://www.linkedin.com/in/pedro-henrique-dias-sousa-a38874149/"
+				title="Ver meu perfil no linkedin; (Abre em nova guia.)" target="_blank">
+				Meu perfil no linkedin;
+			</a>
+			|&nbsp;
+			<a href="mailto: pedrohenriquediassousa@outlook.com"
+				title="Me envie uma mensagem via e-mail. (abre em nova guia ou no seu cliente de e-mail.)"
+				target="_blank">
+				Me envie um e-mail.
+			</a>
+		</div>
+	</div>
 </body>
 <script src="./assets/scripts/accessibilityMenuControls.js"></script>
 <script src="./assets/scripts/blankAlerts.js"></script>
 <script src="./assets/scripts/cpfCheckAndMask.js"></script>
 <script src="./assets/scripts/manipulateForm.js"></script>
 <script src="./assets/scripts/zipCodeCheck.js"></script>
+<script src="./assets/scripts/mascara.js"></script>
 
 </html>
